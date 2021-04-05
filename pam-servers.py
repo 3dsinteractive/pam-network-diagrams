@@ -6,6 +6,7 @@ from diagrams.aws.integration import SQS
 from diagrams.aws.storage import S3
 from diagrams.aws.analytics import ManagedStreamingForKafka
 from diagrams.aws.general import GenericFirewall
+from diagrams.aws.database import RDSMysqlInstance
 
 with Diagram("PAM Servers Mini", show=False):
     lb = ELB("lb")
@@ -26,12 +27,14 @@ with Diagram("PAM Servers Mini", show=False):
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
     redis = ElasticacheForRedis("Redis")
+    mysql = RDSMysqlInstance("Mysql")
 
     lb >> workers
     workers >> fw >> dbs
     workers >> s3
     workers >> kfk
     workers >> redis
+    workers >> mysql
 
 with Diagram("PAM Servers Basic", show=False):
     lb = ELB("lb")
@@ -52,12 +55,14 @@ with Diagram("PAM Servers Basic", show=False):
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
     redis = ElasticacheForRedis("Redis")
+    mysql = RDSMysqlInstance("Mysql")
 
     lb >> workers
     workers >> fw >> dbs
     workers >> s3
     workers >> kfk
     workers >> redis
+    workers >> mysql
 
 with Diagram("PAM Servers Pro", show=False):
     lb = ELB("lb")
@@ -80,12 +85,14 @@ with Diagram("PAM Servers Pro", show=False):
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
     redis = ElasticacheForRedis("Redis")
+    mysql = RDSMysqlInstance("Mysql")
 
     lb >> workers
     workers >> fw >> dbs
     workers >> s3
     workers >> kfk
     workers >> redis
+    workers >> mysql
 
 with Diagram("PAM Servers Pro XL", show=False):
     lb = ELB("lb")
@@ -112,12 +119,14 @@ with Diagram("PAM Servers Pro XL", show=False):
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
     redis = ElasticacheForRedis("Redis")
+    mysql = RDSMysqlInstance("Mysql")
 
     lb >> workers
     workers >> fw >> dbs
     workers >> s3
     workers >> kfk
     workers >> redis
+    workers >> mysql
 
 with Diagram("PAM Servers Pro 2XL", show=False):
     lb = ELB("lb")
@@ -150,9 +159,11 @@ with Diagram("PAM Servers Pro 2XL", show=False):
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
     redis = ElasticacheForRedis("Redis")
+    mysql = RDSMysqlInstance("Mysql")
 
     lb >> workers
     workers >> fw >> dbs
     workers >> s3
     workers >> kfk
     workers >> redis
+    workers >> mysql

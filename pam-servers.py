@@ -73,7 +73,9 @@ with Diagram("PAM Servers Pro", show=False):
         with Cluster("Databases"):
             dbs = [ECS("db1"),
                    ECS("db2"),
-                   ECS("db3")]
+                   ECS("db3"),
+                   ECS("db4"),
+                   ECS("db5")]
 
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
@@ -92,14 +94,20 @@ with Diagram("PAM Servers Pro XL", show=False):
         with Cluster("Workers"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
-                       ECS("worker3")]
+                       ECS("worker3"),
+                       ECS("worker4"),
+                       ECS("worker5")]
 
         fw = GenericFirewall("Firewall")
 
         with Cluster("Databases"):
             dbs = [ECS("db1"),
                    ECS("db2"),
-                   ECS("db3")]
+                   ECS("db3"),
+                   ECS("db4"),
+                   ECS("db5"),
+                   ECS("db6"),
+                   ECS("db7")]
 
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")
@@ -118,14 +126,26 @@ with Diagram("PAM Servers Pro 2XL", show=False):
         with Cluster("Workers"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
-                       ECS("worker3")]
+                       ECS("worker3"),
+                       ECS("worker4"),
+                       ECS("worker5"),
+                       ECS("worker6"),
+                       ECS("worker7"),
+                       ECS("worker8")]
 
         fw = GenericFirewall("Firewall")
 
         with Cluster("Databases"):
             dbs = [ECS("db1"),
                    ECS("db2"),
-                   ECS("db3")]
+                   ECS("db3"),
+                   ECS("db4"),
+                   ECS("db5"),
+                   ECS("db6"),
+                   ECS("db7"),
+                   ECS("db8"),
+                   ECS("db9"),
+                   ECS("db10")]
 
     s3 = S3("Images and Files")
     kfk = ManagedStreamingForKafka("Kafka Streams")

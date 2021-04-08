@@ -9,9 +9,9 @@ from diagrams.aws.general import GenericFirewall
 from diagrams.aws.database import RDSMysqlInstance
 
 with Diagram("PAM Servers Mini", show=False):
-    lb = ELB("lb")
+    lb = ELB("Load balancer")
 
-    with Cluster("EKS"):
+    with Cluster("EKS Managed K8S"):
         with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
@@ -37,9 +37,9 @@ with Diagram("PAM Servers Mini", show=False):
     workers >> mysql
 
 with Diagram("PAM Servers Basic", show=False):
-    lb = ELB("lb")
+    lb = ELB("Load balancer")
 
-    with Cluster("EKS"):
+    with Cluster("EKS Managed K8S"):
         with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
@@ -65,9 +65,9 @@ with Diagram("PAM Servers Basic", show=False):
     workers >> mysql
 
 with Diagram("PAM Servers Pro", show=False):
-    lb = ELB("lb")
+    lb = ELB("Load balancer")
 
-    with Cluster("EKS"):
+    with Cluster("EKS Managed K8S"):
         with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
@@ -95,9 +95,9 @@ with Diagram("PAM Servers Pro", show=False):
     workers >> mysql
 
 with Diagram("PAM Servers Pro XL", show=False):
-    lb = ELB("lb")
+    lb = ELB("Load balancer")
 
-    with Cluster("EKS"):
+    with Cluster("EKS (Managed Kubernetes"):
         with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
@@ -129,9 +129,9 @@ with Diagram("PAM Servers Pro XL", show=False):
     workers >> mysql
 
 with Diagram("PAM Servers Pro 2XL", show=False):
-    lb = ELB("lb")
+    lb = ELB("Load balancer")
 
-    with Cluster("EKS"):
+    with Cluster("EKS Managed K8S"):
         with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),

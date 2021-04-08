@@ -19,7 +19,7 @@ with Diagram("PAM Servers Mini", show=False):
 
         fw = GenericFirewall("Firewall")
 
-        with Cluster("Databases"):
+        with Cluster("Elasticsearch Cluster"):
             dbs = [ECS("db1"),
                    ECS("db2"),
                    ECS("db3")]
@@ -47,7 +47,7 @@ with Diagram("PAM Servers Basic", show=False):
 
         fw = GenericFirewall("Firewall")
 
-        with Cluster("Databases"):
+        with Cluster("Elasticsearch Cluster"):
             dbs = [ECS("db1"),
                    ECS("db2"),
                    ECS("db3")]
@@ -75,7 +75,7 @@ with Diagram("PAM Servers Pro", show=False):
 
         fw = GenericFirewall("Firewall")
 
-        with Cluster("Databases"):
+        with Cluster("Elasticsearch Cluster"):
             dbs = [ECS("db1"),
                    ECS("db2"),
                    ECS("db3"),
@@ -107,7 +107,7 @@ with Diagram("PAM Servers Pro XL", show=False):
 
         fw = GenericFirewall("Firewall")
 
-        with Cluster("Databases"):
+        with Cluster("Elasticsearch Cluster"):
             dbs = [ECS("db1"),
                    ECS("db2"),
                    ECS("db3"),
@@ -144,7 +144,7 @@ with Diagram("PAM Servers Pro 2XL", show=False):
 
         fw = GenericFirewall("Firewall")
 
-        with Cluster("Databases"):
+        with Cluster("Elasticsearch Cluster"):
             dbs = [ECS("db1"),
                    ECS("db2"),
                    ECS("db3"),

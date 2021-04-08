@@ -12,7 +12,7 @@ with Diagram("PAM Servers Mini", show=False):
     lb = ELB("lb")
 
     with Cluster("EKS"):
-        with Cluster("Workers"):
+        with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
                        ECS("worker3")]
@@ -40,7 +40,7 @@ with Diagram("PAM Servers Basic", show=False):
     lb = ELB("lb")
 
     with Cluster("EKS"):
-        with Cluster("Workers"):
+        with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
                        ECS("worker3")]
@@ -68,7 +68,7 @@ with Diagram("PAM Servers Pro", show=False):
     lb = ELB("lb")
 
     with Cluster("EKS"):
-        with Cluster("Workers"):
+        with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
                        ECS("worker3")]
@@ -98,7 +98,7 @@ with Diagram("PAM Servers Pro XL", show=False):
     lb = ELB("lb")
 
     with Cluster("EKS"):
-        with Cluster("Workers"):
+        with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
                        ECS("worker3"),
@@ -132,7 +132,7 @@ with Diagram("PAM Servers Pro 2XL", show=False):
     lb = ELB("lb")
 
     with Cluster("EKS"):
-        with Cluster("Workers"):
+        with Cluster("Workers Golang Microservices"):
             workers = [ECS("worker1"),
                        ECS("worker2"),
                        ECS("worker3"),

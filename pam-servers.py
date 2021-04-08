@@ -25,9 +25,9 @@ with Diagram("PAM Servers Mini", show=False):
                    ECS("db3")]
 
     s3 = S3("Images and Files")
-    kfk = ManagedStreamingForKafka("Kafka Streams")
-    redis = ElasticacheForRedis("Redis")
-    mysql = RDSMysqlInstance("Mysql")
+    kfk = ManagedStreamingForKafka("Managed Kafka")
+    redis = ElasticacheForRedis("Managed Redis")
+    mysql = RDSMysqlInstance("Managed MySql")
 
     lb >> workers
     workers >> fw >> dbs
@@ -53,9 +53,9 @@ with Diagram("PAM Servers Basic", show=False):
                    ECS("db3")]
 
     s3 = S3("Images and Files")
-    kfk = ManagedStreamingForKafka("Kafka Streams")
-    redis = ElasticacheForRedis("Redis")
-    mysql = RDSMysqlInstance("Mysql")
+    kfk = ManagedStreamingForKafka("Managed Kafka")
+    redis = ElasticacheForRedis("Managed Redis")
+    mysql = RDSMysqlInstance("Managed MySql")
 
     lb >> workers
     workers >> fw >> dbs
@@ -83,9 +83,9 @@ with Diagram("PAM Servers Pro", show=False):
                    ECS("db5")]
 
     s3 = S3("Images and Files")
-    kfk = ManagedStreamingForKafka("Kafka Streams")
-    redis = ElasticacheForRedis("Redis")
-    mysql = RDSMysqlInstance("Mysql")
+    kfk = ManagedStreamingForKafka("Managed Kafka")
+    redis = ElasticacheForRedis("Managed Redis")
+    mysql = RDSMysqlInstance("Managed MySql")
 
     lb >> workers
     workers >> fw >> dbs
@@ -117,9 +117,9 @@ with Diagram("PAM Servers Pro XL", show=False):
                    ECS("db7")]
 
     s3 = S3("Images and Files")
-    kfk = ManagedStreamingForKafka("Kafka Streams")
-    redis = ElasticacheForRedis("Redis")
-    mysql = RDSMysqlInstance("Mysql")
+    kfk = ManagedStreamingForKafka("Managed Kafka")
+    redis = ElasticacheForRedis("Managed Redis")
+    mysql = RDSMysqlInstance("Managed MySql")
 
     lb >> workers
     workers >> fw >> dbs
@@ -157,9 +157,9 @@ with Diagram("PAM Servers Pro 2XL", show=False):
                    ECS("db10")]
 
     s3 = S3("Images and Files")
-    kfk = ManagedStreamingForKafka("Kafka Streams")
-    redis = ElasticacheForRedis("Redis")
-    mysql = RDSMysqlInstance("Mysql")
+    kfk = ManagedStreamingForKafka("Managed Kafka")
+    redis = ElasticacheForRedis("Managed Redis")
+    mysql = RDSMysqlInstance("Managed MySql")
 
     lb >> workers
     workers >> fw >> dbs
